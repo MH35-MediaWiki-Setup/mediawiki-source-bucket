@@ -1,0 +1,2 @@
+# mediawiki-source-bucket
+MediaWikiのEC2インスタンスビルドに必要なファイルのためのバケット
