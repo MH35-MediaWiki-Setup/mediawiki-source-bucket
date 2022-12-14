@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: MediaWiki EC2 source files
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}-Bucket"
